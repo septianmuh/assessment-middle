@@ -31,3 +31,61 @@ body {
     text-wrap: balance;
   }
 }
+
+.def-backg {
+    background-image: url('../assets/images/background.png');
+}
+
+.second-backg{
+    background-image: url('../assets/images/background2.jpg');
+}
+
+@layer base {
+	@font-face {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		src: url('../assets/font/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+	}
+}
+  
+:root {
+    --main-color: #00a9e0;
+    --submain-color: #005687;
+    --main-vertical: linear-gradient(0deg, rgba(0,86,135,1) 0%, rgb(46, 191, 240) 100%);
+    --main-horizontal: linear-gradient(0deg, rgba(39,210,227,0.5382528011204482) 0%, rgba(81,240,241,0.46262254901960786) 100%);
+
+}
+
+.bg-mainv {
+    background-image: var(--main-vertical);
+}
+
+.bg-mainh {
+    background-image: var(--main-horizontal);
+}
+
+.sidebar-collapse {
+    width: 4.15rem;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@layer utilities {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    @apply appearance-none m-0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
